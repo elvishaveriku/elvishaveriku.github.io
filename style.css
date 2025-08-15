@@ -1,0 +1,259 @@
+/* ===== Global Styles ===== */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    color: #39ff14;
+    /* Neon green */
+}
+
+a {
+    color: #39ff14;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #39ff14;
+    color: #0a0a0a;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #2fdc11;
+}
+
+/* ===== Badges (Static Style) ===== */
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: visible; /* allows scaled badges to show fully */
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:7px; /* space around badge for scaling */
+}
+
+.badge-item img {
+    max-height: 80px;
+    width: auto;
+    border: 2px solid #39ff14; /* Neon green border */
+    border-radius: 5px;
+    background: #1a1a1a;
+    padding: 5px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.badge-item img:hover {
+    transform: scale(1.15); /* grow in place */
+    box-shadow: 0 8px 20px rgba(57, 255, 20, 0.4); /* Neon green glow */
+}
+
+.badge-item p.badge-label {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #39ff14;
+    text-align: center;
+    max-width: 100px;
+    line-height: 1.2;
+}
+
+
+/* ===== Badge Carousel Layout ===== */
+.badge-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.badge-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.badge-carousel .badge-container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* force one line */
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.badge-carousel .badge-item {
+    flex: 0 0 auto;
+    /* prevent shrinking */
+    text-align: center;
+}
+
+.badge-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #39ff14;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 2;
+}
+
+.badge-btn:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* ===== Projects ===== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #39ff14;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* ===== Contact ===== */
+.contact i {
+    margin-right: 5px;
+    color: #39ff14; /* neon green */
+    transition: color 0.3s;
+}
+
+.contact a:hover i {
+    color: #2fdc11; /* slightly different green on hover */
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #39ff14;
+    font-size: 0.9rem;
+}
+
+/* ===== Mobile Friendly ===== */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+/* ===== Carousel ===== */
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border: 1px solid #39ff14;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: calc(50% - 20px);
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #39ff14;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.2s;
+    z-index: 2;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile view: 1 card at a time */
+@media (max-width: 600px) {
+    .project-card {
+        min-width: calc(100% - 20px);
+    }
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 80px 20px;
+    text-align: center;
+
+}

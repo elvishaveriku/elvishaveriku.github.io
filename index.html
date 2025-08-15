@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cybersecurity Portfolio of Elvis">
+    <title>My Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+</head>
+
+<body>
+
+    <!-- ===== Hero Section ===== -->
+    <header class="hero">
+        <h1>Elvis Haveriku</h1>
+        <h2>Cybersecurity Enthusiast</h2>
+        <p>I protect systems, hunt threats, and solve security challenges.</p>
+        <a href="docs/CV_Elvis_Haveriku.pdf" class="btn" target="_blank">📄 Download CV</a>
+    </header>
+
+
+    <!-- ===== About Me ===== -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            I’m an aspiring <strong>Cybersecurity Analyst</strong> with a passion for both offensive and defensive
+            security.
+            I recently completed a 7-month, hands-on cybersecurity training at <strong>BeCode Brussels</strong>,
+            where I gained practical experience in <strong>SOC analysis</strong>, <strong>penetration testing</strong>,
+            and <strong>threat detection</strong> through real-world team projects.
+        </p>
+        <p>
+            My expertise includes configuring and using <strong>SIEM tools like Splunk</strong> for log analysis and
+            threat hunting,
+            simulating and detecting <strong>Command & Control (C2) traffic</strong> in virtual labs,
+            and performing <strong>automated web security reconnaissance</strong>.
+            I also practice daily on TryHackMe to sharpen my offensive and defensive skills.
+        </p>
+        <p>
+            I hold the <strong>Microsoft SC-900</strong> and <strong>AZ-900</strong> certifications and have hands-on
+            experience with
+            <strong>Python, Bash, PowerShell</strong>, and security tools such as <strong>Metasploit, Caldera,
+                Wireshark, and Sysmon</strong>.
+            Additionally, I have a working knowledge of web technologies including HTML, CSS, and JavaScript.
+        </p>
+        <p>
+            I’m seeking an <strong>internship or junior role</strong> as a SOC Analyst or Penetration Tester,
+            where I can contribute my skills, continue learning, and take on real-world security challenges.
+        </p>
+    </section>
+
+
+
+    <!-- ===== Badges ===== -->
+    <section id="badges">
+        <h2>Certifications & Badges</h2>
+        <div class="badge-carousel">
+            <button class="badge-btn badge-prev">&#10094;</button>
+            <div class="badge-track-container">
+                <div class="badge-container">
+                    <!-- SC-900 -->
+                    <div class="badge-item">
+                        <a href="https://learn.microsoft.com/en-us/users/elvis-6858/credentials/certification/security-compliance-and-identity-fundamentals"
+                            target="_blank">
+                            <img src="images/sc900_badge.png" alt="Microsoft Certified: SC-900">
+                            <p class="badge-label">SC-900</p>
+                        </a>
+                    </div>
+
+                    <!-- AZ-900 -->
+                    <div class="badge-item">
+                        <a href="https://learn.microsoft.com/en-us/users/elvis-6858/credentials/certification/azure-fundamentals"
+                            target="_blank">
+                            <img src="images/az900_badge.png" alt="Microsoft Certified: AZ-900">
+                            <p class="badge-label">AZ-900</p>
+                        </a>
+                    </div>
+
+                    <!-- TryHackMe Badge -->
+                    <div class="badge-item">
+                        <a href="https://tryhackme.com/p/lepri" target="_blank">
+                            <img src="images/tryhackme_badge.png" alt="TryHackMe Badge">
+                            <p class="badge-label">TryHackMe</p>
+                        </a>
+                    </div>
+
+                    <!-- SBT Network Analysis -->
+                    <div class="badge-item">
+                        <a href="https://elearning.securityblue.team/home/certificate/347312289" target="_blank">
+                            <img src="images/sbt.png" alt="Introduction to Network Analysis">
+                            <p class="badge-label">Introduction to Network Analysis</p>
+                        </a>
+                    </div>
+
+                    <!-- SBT OSINT -->
+                    <div class="badge-item">
+                        <a href="https://elearning.securityblue.team/home/certificate/836363855" target="_blank">
+                            <img src="images/sbt.png" alt="Introduction to OSINT">
+                            <p class="badge-label">Introduction to OSINT</p>
+                        </a>
+                    </div>
+
+                    <!-- Udemy Python -->
+                    <div class="badge-item">
+                        <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-bb21591e-ace3-447b-b252-860793fca038.jpg?v=1696348093000"
+                            target="_blank">
+                            <img src="images/udemy.png" alt="Udemy Python">
+                            <p class="badge-label">Udemy Python</p>
+                        </a>
+                    </div>
+
+                    <!-- TryHackMe SoC 1 -->
+                    <div class="badge-item">
+                        <a href="https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-Y3OWUF5XRS.pdf"
+                            target="_blank">
+                            <img src="images/thm.png" alt="TryHackMe SoC Level 1">
+                            <p class="badge-label">TryHackMe SoC Level 1</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="badge-btn badge-next">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="carousel">
+            <button class="carousel-btn prev">&#10094;</button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+
+                    <li class="project-card">
+                        <h3>Command & Control Server Creation and Traffic Detection</h3>
+                        <p>Built an isolated virtual lab (Kali Linux attacker, Windows 10 victim, Ubuntu SIEM) to
+                            simulate C2 beaconing with MITRE Caldera and detect malicious activity in Splunk via Sysmon
+                            logs.</p>
+                        <a href="#">🔗 View Project</a>
+                    </li>
+
+                    <li class="project-card">
+                        <h3>Automated Web Security Reconnaissance</h3>
+                        <p>Used Subfinder and Nuclei for reconnaissance and vulnerability scanning. Developed a Python
+                            script to detect missing security headers with low-noise scanning for stealth and
+                            efficiency.</p>
+                        <a href="#">🔗 View Project</a>
+                    </li>
+
+                    <li class="project-card">
+                        <h3>Flask Server Contact Form</h3>
+                        <p>Created a secure contact form using Flask with input validation and sanitization to ensure
+                            accurate, safe submissions.</p>
+                        <a href="https://github.com/elvishaveriku/Cybersecurity-Becode-Projects/tree/main/Flask_Project">🔗 View Project</a>
+                    </li>
+
+                    <li class="project-card">
+                        <h3>Phishing Website Server</h3>
+                        <p>Built a simulated phishing site with Flask and Ngrok to capture credentials, demonstrating
+                            the dangers of insecure login forms and the importance of secure coding.</p>
+                        <a href="https://github.com/elvishaveriku/Cybersecurity-Becode-Projects/tree/main/Phishing_Website_Project">🔗 View Project</a>
+                    </li>
+
+                    <li class="project-card">
+                        <h3>Windows Server 2022 Active Directory</h3>
+                        <p>Configured a Windows Server 2022 AD environment with DNS, DHCP, IIS, and GPOs to manage users
+                            with role-based permissions and enforce security policies.</p>
+                        <a href="https://github.com/elvishaveriku/Cybersecurity-Becode-Projects/tree/main/Windows_Server_Project">🔗 View Project</a>
+                    </li>
+
+                    <li class="project-card">
+                        <h3>Linux Server Configuration</h3>
+                        <p>Set up a Linux server with DNS, DHCP, and Nginx, automated backups with cron and rsync, and
+                            secured remote access via SSH.</p>
+                        <a href="https://github.com/elvishaveriku/Cybersecurity-Becode-Projects/tree/main/Linux_Server_Project">🔗 View Project</a>
+                    </li>
+
+                    <li class="project-card">
+                        <h3>Network Security Architecture — Cisco Packet Tracer</h3>
+                        <p>Designed a secure VLAN-based network with ACLs, DNS, DHCP, and iSCSI servers to improve
+                            segmentation, performance, and security.</p>
+                        <a href="https://github.com/elvishaveriku/Cybersecurity-Becode-Projects/tree/main/Packet_Tracer_Project">🔗 View Project</a>
+                    </li>
+
+                </ul>
+            </div>
+            <button class="carousel-btn next">&#10095;</button>
+        </div>
+    </section>
+
+
+    <!-- ===== Contact ===== -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p><a href="mailto:elvishaveriku@gmail.com">elvishaveriku@gmail.com</a></p>
+        <p>
+            <a href="https://linkedin.com/in/elvis-haveriku" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a> |
+            <a href="https://github.com/elvishaveriku" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2025 Elvis | Built with 💻 & ☕</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
