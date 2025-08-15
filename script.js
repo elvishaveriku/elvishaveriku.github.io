@@ -36,32 +36,41 @@ window.addEventListener('resize', () => {
 const badgeTrack = document.querySelector('.badge-carousel .badge-container');
 const badgePrev = document.querySelector('.badge-prev');
 const badgeNext = document.querySelector('.badge-next');
-const badgeItems = Array.from(badgeTrack.children);
+const badgeCards = Array.from(badgeTrack.children);
 
 let badgeIndex = 0;
-let badgesPerView = window.innerWidth <= 600 ? 2 : 4;
+let badgesPerView = window.innerWidth <= 300 ? 1 : 3;
 
 function updateBadgeCarousel() {
-    const badgeWidth = badgeItems[0].getBoundingClientRect().width + 20; // includes gap
+    const badgeWidth = badgeCards[0].getBoundingClientRect().width + 20; // includes gap
     badgeTrack.style.transform = `translateX(-${badgeIndex * badgeWidth}px)`;
 }
 
+// Next Button
 badgeNext.addEventListener('click', () => {
-    if (badgeIndex < badgeItems.length - badgesPerView) {
-        badgeIndex++;
+    if (badgeIndex < badgeCards.length - badgesPerView) {
+        badgeIndex += badgesPerView;
         updateBadgeCarousel();
     }
 });
 
+// Prev Button
 badgePrev.addEventListener('click', () => {
     if (badgeIndex > 0) {
-        badgeIndex--;
+        badgeIndex -= badgesPerView;
         updateBadgeCarousel();
     }
 });
 
+// Handle resize
 window.addEventListener('resize', () => {
-    badgesPerView = window.innerWidth <= 600 ? 2 : 4;
+    badgesPerView = window.innerWidth <= 600 ? 1 : 3;
+    badgeIndex = 0;
+    updateBadgeCarousel();
+});
+
+// Initialize
+window.addEventListener('load', () => {
     badgeIndex = 0;
     updateBadgeCarousel();
 });
